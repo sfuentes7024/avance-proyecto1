@@ -1,0 +1,17 @@
+.imgProducto {
+    width: 50px;
+}
+#items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.card{
+    width: 250px;
+    margin: 2rem;
+}
+textarea{
+    display: block;
+    width: 510px;
+}

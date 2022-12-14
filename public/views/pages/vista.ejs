@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<body>
+
+    <div class="col-6">
+
+            <% if(productos.length> 0) {%>
+
+                <table id="tabla" class="table">
+                    <thead>
+                        <tr>
+                          
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Precio</th>
+                          <th scope="col">URL</th>
+                        </tr>
+                      </thead>
+
+                    <% productos.map(function (item) { %>
+                        <tr>
+                            <td>
+                                <%= item.nombre %>
+
+                            </td>
+                            <td>
+                                <%= item.precio %>
+                            </td>
+                            <td>
+                                <img class='imgProducto' src='<%= item.url %>' />
+                            </td>
+                        </tr>
+                        <% }) %>
+                </table>
+
+                <% } else { %>
+                    <h2>No hay productos</h2>
+                    <a href="/" class="btn btn-primary m-2">Volver a cargar productos</a>
+                    <% } %>
+
+
+    </div>
+
+</body>
+
+</html>
